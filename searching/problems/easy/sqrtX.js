@@ -15,4 +15,4 @@ function sqrt(x) {
   }
   return right;
 }
-console.log(sqrt(8));
+console.log(sqrt(6));
