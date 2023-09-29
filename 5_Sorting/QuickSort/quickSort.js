@@ -28,3 +28,19 @@ function quickSort(arr, left = 0, right = arr.length - 1) {
 }
 
 console.log(quickSort([4, 6, 9, 1, 2, 5, 3]));
+
+// ========================================================================================
+function qs(arr) {
+  if (arr.length <= 1) return arr;
+
+  const pivot = arr[arr.length - 1];
+  const leftArr = [];
+  const rightArr = [];
+
+  for (let i = 0; i < arr.length - 1; i++) {
+    arr[i] > pivot ? rightArr.push(arr[i]) : leftArr.push(arr[i]);
+  }
+  return [...qs(leftArr), pivot, ...qs(rightArr)];
+}
+
+console.log(qs([1, 4, 6, 9, 2, 5, 3, 99]));

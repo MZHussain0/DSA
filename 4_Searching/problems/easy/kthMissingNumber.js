@@ -13,4 +13,4 @@ function findKthMissing(arr, k) {
   }
   return num - 1;
 }
-console.log(findKthMissing([1, 2, 3, 4], 5));
+console.log(findKthMissing([2, 3, 4, 7, 11], 5));

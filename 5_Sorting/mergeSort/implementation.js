@@ -31,3 +31,31 @@ function mergeSort(arr) {
 }
 
 console.log(mergeSort([10, 24, 76, 73]));
+
+// ---------------------------------------------------------------------------------------------------------------------
+function MS2(arr) {
+  if (arr.length <= 1) return arr;
+  let mid = Math.floor(arr.length / 2);
+  let left = MS2(arr.slice(0, mid));
+  let right = MS2(arr.slice(mid));
+  // return merger(left, right);
+  return merged(left, right);
+}
+
+function merged(left, right) {
+  let results = [];
+  let i = 0;
+  let j = 0;
+
+  while (i < left.length && j < right.length) {
+    if (left[i] < right[j]) {
+      results.push(left[i]);
+      i++;
+    } else {
+      results.push(right[j]);
+      j++;
+    }
+  }
+  return results.concat(left.slice(i)).concat(right.slice(j));
+}
+console.log(MS2([10, 24, 76, 73]));
