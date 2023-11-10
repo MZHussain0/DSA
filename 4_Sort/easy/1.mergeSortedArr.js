@@ -41,3 +41,6 @@ const merge2 = (nums1, m, nums2, n) => {
 };
 
 console.log(merge2([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3));
+
+const merge3 = (nums1, nums2) => {};
+console.log(merge3([1, 2, 3, 0, 0, 0], [2, 5, 6]));
